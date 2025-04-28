@@ -41,4 +41,23 @@ class UserRequest extends FormRequest
             'password' => 'required|string|min:8',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Please provide your name.',
+            'name.string' => 'The name must be a valid string. Please ensure it contains only letters.',
+            'name.min' => 'The name must be at least 3 characters long.',
+            'name.max' => 'The name must not exceed 255 characters.',
+
+            'email.required' => 'Please provide your email address.',
+            'email.email' => 'Please enter a valid email address.',
+            'email.max' => 'The email address is too long. Please keep it under 255 characters.',
+            'email.unique' => 'The email address is already taken. Please choose a different email.',
+
+            'password.required' => 'Please provide a password.',
+            'password.string' => 'The password must be a valid string.',
+            'password.min' => 'The password must be at least 8 characters long.',
+        ];
+    }
 }

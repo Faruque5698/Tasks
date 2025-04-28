@@ -38,4 +38,12 @@ class TaskIsCompletedRequest extends FormRequest
             'is_completed' => 'required|boolean',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'is_completed.required' => 'Please indicate whether the task is completed or not.',
+            'is_completed.boolean' => 'Please provide a valid option (true or false) for task completion.',
+        ];
+    }
 }

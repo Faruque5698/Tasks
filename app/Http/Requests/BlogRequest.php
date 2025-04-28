@@ -39,4 +39,16 @@ class BlogRequest extends FormRequest
             'content' => 'required|string',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'The title is required. Please provide a title for your post.',
+            'title.string' => 'The title should be a valid string. Please make sure your title is composed of letters and/or numbers.',
+            'title.max' => 'The title is too long. Please keep it under 255 characters.',
+
+            'content.required' => 'Content is required. Please write something for your post.',
+            'content.string' => 'The content should be a valid string. Please check your content for any unusual characters.',
+        ];
+    }
 }

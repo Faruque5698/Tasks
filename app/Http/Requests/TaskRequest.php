@@ -38,4 +38,13 @@ class TaskRequest extends FormRequest
             'title' => 'required|string|max:255',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'title.required' => 'The title is required. Please provide a title for your post.',
+            'title.string' => 'The title must be a valid text. Please ensure your title contains only letters and numbers.',
+            'title.max' => 'The title is too long. Please keep it under 255 characters.',
+        ];
+    }
 }
