@@ -172,9 +172,9 @@ Follow these steps to run the project locally.
     }
 ]
 ```
-#### Get is_completed true all tasks
+#### Update is_completed for task
 ```http
-  pathch /api/tasks/1
+  PATCH /api/tasks/1
 ```
 #### Request Body
 ```json
