@@ -1,4 +1,4 @@
-# Laravel Project Setup Instructions
+# This Project Setup Instructions
 
 Follow these steps to run the project locally.
 
