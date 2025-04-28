@@ -4,22 +4,12 @@ use App\Models\User;
 
 class UserRepository
 {
-    public function __construct(User $model) {
-        $this->model = $model;
-    }
+    public function __construct(protected User $model) {}
+
 
     public function create(array $data)
     {
         return $this->model::create($data);
     }
 
-    public function findByEmail(string $email)
-    {
-        return $this->model::where('email', $email)->first();
-    }
-
-    public function findById(int $id)
-    {
-        return $this->model::find($id);
-    }
 }

@@ -10,18 +10,7 @@ use App\Services\UserService; // Import the UserService class
 
 class UserController extends Controller
 {
-    public function __construct(UserService $service)
-    {
-        $this->service = $service;
-    }
-
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
+    public function __construct(protected UserService $service){}
 
     /**
      * Store a newly created resource in storage.

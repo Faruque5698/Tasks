@@ -8,9 +8,7 @@ use App\Repositories\UserRepository;
 class UserService
 {
 
-    public function __construct(UserRepository $repository) {
-        $this->repository = $repository;
-    }
+    public function __construct(protected UserRepository $repository) {}
 
     public function register(FormRequest $request)
     {
