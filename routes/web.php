@@ -3,9 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return "Successfully Running";
 });
-Route::get('test', function (){
-    $user = \App\Models\User::findOrFail(1);
-   return $user;
-});
+
