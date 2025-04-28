@@ -13,7 +13,7 @@ Follow these steps to run the project locally.
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/Faruque5698/Tasks.git
-   cd your-laravel-project
+   cd Tasks
  2. **Copy .env File**
     ```bash
     cp .env.example .env
